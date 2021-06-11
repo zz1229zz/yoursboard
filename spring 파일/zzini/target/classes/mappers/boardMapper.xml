@@ -3,14 +3,26 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 	<mapper namespace="mysqlBoard">
-	
+		
+		<!-- 회원별 게시글 리스트 조회 -->
   		<select id="board_list" resultType="BoardDTO">
-  			select * from board where id = #{id} order by date desc
+  			select * from board WHERE id = #{id} ORDER BY DATE DESC LIMIT #{startindex}, 10
   		</select>
   		
+  		<!-- 회원별 게시글 갯수 조회 -->
   		<select id="board_count" resultType="int">
   			SELECT COUNT(*) as cnt FROM board where id = #{id}
   		</select>
+  		
+  		<!-- 게시글 상세 조회 -->
+  		<select id="board_view" resultType="BoardDTO">
+  			select * from board where id = #{id} and `INDEX` = #{index}
+  		</select>
+  		
+  		<!-- 게시글 작성 -->
+  		<insert id="board_insert">
+  			insert into board (id,  title, content) values (#{id}, #{title}, #{content})
+  		</insert>
 	
   
 	</mapper>

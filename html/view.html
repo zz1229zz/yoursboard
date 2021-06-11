@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일기 상세보기</title>
+    <link rel="stylesheet" href="view.css">
+</head>
+<body>
+    <section>
+        <header>
+            <p>YOURSBOARD</p>
+            <a>로그아웃</a>
+            <span>조성현님</span>
+        </header>
+
+        <div id="container">
+            
+            <div id="search">
+                <input id="search_date" type="date">
+                <button id="search_btn" type="submit">GO</button>
+            </div><!--search-->
+
+            <div id="board">
+                <table>
+                    <tr>
+                        <td id="title">제목 어쩌구저쩌구</td>
+                    </tr>
+                    <tr>
+                        <td id="date">2021.06.10 10:09</td>
+                    </tr>
+                    <tr>
+                        <td id="content">오늘 다이어트 진짜 열심히 했다<br>
+                            저녁에는 lck 봐야지
+                        </td>
+                    </tr>
+                </table>
+            </div><!--board-->
+
+            <div id="upload">
+                <button id="edit_btn">수정</button>                   
+                <button id="list_btn">목록</button>
+            </div>
+        </div><!--container-->
+    </section>
+</body>
+</html>

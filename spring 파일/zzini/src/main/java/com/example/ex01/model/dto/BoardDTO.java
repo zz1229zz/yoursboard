@@ -11,4 +11,7 @@ public class BoardDTO {
 	private String title;
 	private String content;
 	private Date date;
+	private int startindex;
+	private int cntperpage;
+	private int curPage;
 }
